@@ -23,7 +23,8 @@
     "resolve": "^1.20.0"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^3.15.0",
+    "esm": "^3.2.25",
     "npmpub": "4",
     "postcss": "^8.3.11",
     "postcss-scss": "^4.0.2",
@@ -36,5 +37,10 @@
     "test": "ava",
     "release": "npmpub",
     "prettier": "prettier --print-width=120 --tab-width=4 --single-quote --trailing-comma=es5 --no-semi --write 'lib/*.js' || true"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   }
 }
